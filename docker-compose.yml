@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+    mongo:
+        image: mongo
+        restart: always
+        environment: 
+            MONGO_INITDB_ROOT_USERNAME: "root"
+            MONGO_INITDB_ROOT_PASSWORD: "example"
+        networks: 
+            - my-network
+  
+    backend:
+        build: ./backend/
+        ports: 
+            - "8081:8081"
+        volumes:
+            - "./backend:/usr/src/app"
+        depends_on: 
+            - mongo
+        networks: 
+            - my-network
+networks: 
+    my-network:
+        driver: bridge
+        
