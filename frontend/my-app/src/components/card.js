@@ -1,12 +1,13 @@
 import { FaTimes } from 'react-icons/fa'
 import {DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd'
 
-const Task = ({ tasks, onDelete, joinMeeting}, index) => {
+const Task = ({ participants, func, setParticipants, tasks, onDelete}, index) => {
+
+
     return (
             <Draggable key={tasks.id} draggableId={JSON.stringify(tasks.id)} index={eval(index)}>
             {(provided) => (
-            <div {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef} className={`task ${tasks.reminder ? 'reminder' : ' '}`} onDoubleClick={(tasks) => joinMeeting(tasks.id)}
-            >
+                <div {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef} className={`task ${tasks.reminder ? 'reminder' : ' '}`}>
             <table>
             <td>
             <h3> {tasks.text}{'  '} </h3>
