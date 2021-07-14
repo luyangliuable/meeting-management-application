@@ -6,6 +6,30 @@
   padding: 0;
 }
 
+.SideBar {
+    z-index: 2;
+    border-radius: 5px 0px 0px 5px;
+    background: rgba(120,120,120,0.6);
+    position: fixed;
+    display: table;
+    padding: 12px;
+    height: 90%;
+    width: 15%;
+    minHeight: 100px;
+    minWidth: 75px;
+    right: 0%;
+    top: 5%;
+    box-shadow: 2px 2px 5px #888;
+}
+
+p.subtitle {
+    font-weight: bold;
+    color: black;
+    margin-top: 0.45em;
+    text-decoration: underline;
+
+    }
+
 .appName {
     color: rgb(240,240,240);
 }
