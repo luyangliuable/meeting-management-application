@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const meetingsRouter = require("./routes/meetings");
+
 const port = 8081;
 
 // Setup database
@@ -31,6 +31,10 @@ app.listen(port, () => {
     console.log("App running on port " + port);
 });
 
+const meetingsRouter = require("./routes/meetings");
 app.use('/meeting/', meetingsRouter);
+
+const personRouter = require('./routes/personRouter')
+app.use('/person/', personRouter);
 
 module.export = app;
