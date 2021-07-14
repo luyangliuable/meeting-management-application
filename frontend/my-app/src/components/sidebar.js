@@ -7,6 +7,7 @@ const SideBar = ({ title, participants }) => {
 
     return (
         <div className='SideBar'>
+        <div className="grabber">Hello</div>
             <h3>{ title }</h3>
             {participants.map((participants, index) => (
                     <li> {participants.participant} </li>

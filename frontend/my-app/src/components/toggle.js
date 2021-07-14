@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { IoSyncCircleSharp } from "react-icons/io5";
 
 
 
@@ -19,7 +20,7 @@ const ToggleButton = () => {
             <span>I</span>
             </div>
             <div className="wrg-toggle-uncheck">
-            <span>O</span>
+              <span><IoSyncCircleSharp style={{color: 'white', position: 'absolute', size: '100px', height: '100px'}}/></span>
             </div>
             </div>
               <div onClick={ triggerToggle } className={ toggle ? 'on' : 'off' }></div>

@@ -5,7 +5,7 @@ const Textarea = ({ agendaName, tasks, onDelete, onToggle }, index) => {
             <div className="textContainer">
             <h1>{agendaName} (meeting minutes) :</h1>
 
-            <textarea>
+            <textarea placeholder="Enter your notes here:">
             </textarea>
             </div>
     )
