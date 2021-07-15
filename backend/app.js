@@ -33,4 +33,8 @@ app.listen(port, () => {
 
 app.use('/meeting/', meetingsRouter);
 
+const personRouter = require("./routes/personRouter");
+app.use("/people/", personRouter);
+app.use("/person/", personRouter);
+
 module.export = app;
