@@ -38,7 +38,7 @@ router.get("/:id/", (req, res) => {
     })
 });
 
-router.put("/:id", (req, res) => {
+router.put("/:id/", (req, res) => {
     const id = req.params.id;
     Meeting.findByIdAndUpdate(id, req.body, {new: true}, (err, result) => {
         if (err) res.status(400).json(err);
