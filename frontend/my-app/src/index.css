@@ -343,7 +343,7 @@ textarea:hover {
     text-align: center;
     font: 14px Arial;
     display: inline;
-    position: absolute;
+    position: relative;
     margin: 8px;
     transiton: all 0.2s ease;
 }
