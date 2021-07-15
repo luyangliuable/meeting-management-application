@@ -13,7 +13,7 @@ const personSchema = new Schema({
     },
     personMobile: {
         type: String,
-        length: 10
+        length: 12
     }
 });
 
